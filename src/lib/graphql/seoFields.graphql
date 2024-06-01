@@ -1,0 +1,11 @@
+fragment SeoFields on ComponentSeo {
+  __typename
+  pageTitle
+  pageDescription
+  canonicalUrl
+  shareImagesCollection(limit: 3, locale: $locale) {
+    items {
+      ...ImageFields
+    }
+  }
+}
